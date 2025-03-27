@@ -8,26 +8,7 @@ services:
     numInstances: 1
     healthCheckPath: /healthz
     envVars:
-      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
-        value: true
-      - key: N8N_RUNNERS_ENABLED
-        value: true
-      - key: N8N_DEFAULT_LOCALE
-        value: fr
-      - key: N8N_ENCRYPTION_KEY
-        generateValue: true
-      - key: PORT
-        value: 5678
-      - key: N8N_LOG_LEVEL
-        value: info
-      - key: GENERIC_TIMEZONE
-        value: Europe/Paris
-      - key: TZ
-        value: Europe/Paris
-      - key: DB_TYPE
-        value: sqlite
-      - key: DB_SQLITE_DATABASE
-        value: /home/node/.n8n/database.sqlite
+      - fromFile: .env
     disks:
       - name: n8nData
         mountPath: /home/node/.n8n
