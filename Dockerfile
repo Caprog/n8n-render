@@ -7,6 +7,8 @@ RUN npm install -g node-fetch
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
+RUN ls -l /start.sh
+
 USER node
 
 ENTRYPOINT ["/start.sh"]
