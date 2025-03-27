@@ -1,15 +1,5 @@
 #!/bin/bash
-
-ls -la /home/node/.n8n
-
 set -e
-
-echo "Waiting for n8nData disk to be mounted..."
-
-while [ ! -d "/home/node/.n8n" ]; do
-  sleep 1
-done
-
-echo "n8nData disk successfully mounted."
-
-exec n8n
+while [ ! -d "/home/node/.n8n" ]; do sleep 1; done
+touch /home/node/.n8n/database.sqlite
+exec n8n --sqlite="/home/node/.n8n/database.sqlite"
