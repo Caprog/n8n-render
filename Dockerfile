@@ -5,3 +5,5 @@ USER root
 RUN npm install -g node-fetch
 
 USER node
+
+VOLUME ["/home/node/.n8n"]
