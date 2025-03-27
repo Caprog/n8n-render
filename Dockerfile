@@ -11,6 +11,6 @@ RUN ls -l /start.sh
 
 USER node
 
-ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["sh", "/start.sh"]
 
 RUN ls -l /start.sh
