@@ -4,6 +4,9 @@ USER root
 
 RUN npm install -g node-fetch
 
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
 USER node
 
-VOLUME ["/home/node/.n8n"]
+ENTRYPOINT ["/start.sh"]
