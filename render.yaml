@@ -28,7 +28,6 @@ services:
         value: sqlite
       - key: DB_SQLITE_DATABASE
         value: /home/node/.n8n/database.sqlite
-
-disks:
-  - name: n8nData
-    mountPath: /home/node/.n8n
+    disks:
+      - name: n8nData
+        mountPath: /home/node/.n8n
