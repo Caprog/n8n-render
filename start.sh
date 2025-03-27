@@ -1,4 +1,5 @@
 #!/bin/bash
+ls -lh /home/node/.n8n
 set -e
 
 while [ ! -d "/home/node/.n8n" ]; do
