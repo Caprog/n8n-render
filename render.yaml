@@ -12,3 +12,7 @@ services:
     disks:
       - name: n8nData
         mountPath: /home/node/.n8n
+
+disks:
+  - name: n8nData
+    sizeGB: 1
