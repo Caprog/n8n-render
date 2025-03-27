@@ -9,10 +9,3 @@ services:
     healthCheckPath: /healthz
     envVars:
       - fromFile: .env
-    disks:
-      - name: n8nData
-        mountPath: /home/node/.n8n
-
-disks:
-  - name: n8nData
-    sizeGB: 1
