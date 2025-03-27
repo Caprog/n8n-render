@@ -10,3 +10,5 @@ RUN chmod +x /start.sh
 USER node
 
 ENTRYPOINT ["/start.sh"]
+
+RUN ls -l /start.sh
