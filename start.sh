@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ls -la /home/node/.n8n
+
 set -e
 
 echo "Waiting for n8nData disk to be mounted..."

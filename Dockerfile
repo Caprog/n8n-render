@@ -1,3 +1,5 @@
+RUN ls -la /home/node/.n8n
+
 FROM n8nio/n8n:latest
 
 USER root
